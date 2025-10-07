@@ -19,7 +19,7 @@ Possible brute-force attacks from these IPs:
 ---
 
 ```
-      UNDER DEVELOPMENT
+     ⚠️ UNDER DEVELOPMENT ⚠️
 ```
 
 ---
