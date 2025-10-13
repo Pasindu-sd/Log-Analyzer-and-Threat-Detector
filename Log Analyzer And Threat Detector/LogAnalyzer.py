@@ -33,5 +33,5 @@ with open(report_file, 'w') as report:
                 print(f"{ip} - {count} failed attempts")
                 report.write(f"{ip} - {count} failed attempts\n")
 
-print(f"\n✅ Report saved to: {report_file}")
+print(f"\n Report saved to: {report_file}")
 
