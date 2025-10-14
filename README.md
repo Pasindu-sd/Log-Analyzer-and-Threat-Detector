@@ -19,7 +19,7 @@ Suspicious IPs (Over Threshold):
 103.21.244.15 - 5 failed attempts
 91.189.88.181 - 3 failed attempts
 
-📄 Report saved to: security_report.txt
+Report saved to: security_report.txt
 
 ```
 
