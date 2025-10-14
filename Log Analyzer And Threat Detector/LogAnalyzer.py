@@ -1,41 +1,31 @@
 import re
-from collections import defaultdict
 
-def analyze_ssh_log(log_file, report_file, threshold=3):
-    failed_attempts = defaultdict(int)
+threshold = 3
+counts = {}
 
-    # Read log file
-    with open(log_file, 'r') as file:
-        for line in file:
-            match = re.search(r'Failed password for .* from (\d+\.\d+\.\d+\.\d+)', line)
-            if match:
-                ip = match.group(1)
-                failed_attempts[ip] += 1
+with open('sample_ssh.log') as f:
+    for line in f:
+        m = re.search(r'Failed password for .* from (\d+\.\d+\.\d+\.\d+)', line)
+        if m:
+            ip = m.group(1)
+            counts[ip] = counts.get(ip, 0) + 1
 
-    # Sort IPs by number of failed attempts (descending)
-    sorted_attempts = sorted(failed_attempts.items(), key=lambda x: x[1], reverse=True)
+with open('security_report.txt', 'w') as rpt:
+    rpt.write("=== Security Report ===\n")
+    if not counts:
+        rpt.write("No failed login attempts found\n")
+        print("No failed login attempts found")
+    else:
+        for ip, c in sorted(counts.items(), key=lambda x: x[1], reverse=True):
+            line = f"IP: {ip} - Failed attempts: {c}\n"
+            rpt.write(line)
+            print(line, end='')
 
-    # Generate report
-    with open(report_file, 'w') as report:
-        print("\n=== Security Report ===")
-        report.write("=== Security Report ===\n")
+        rpt.write("\nSuspicious IPs (>= %d):\n" % threshold)
+        print("\nSuspicious IPs (>= %d):" % threshold)
+        for ip, c in counts.items():
+            if c >= threshold:
+                rpt.write(f"{ip} - {c} failed attempts\n")
+                print(f"{ip} - {c} failed attempts")
 
-        if not sorted_attempts:
-            print("No failed login attempts found")
-            report.write("No failed login attempts found\n")
-        else:
-            for ip, count in sorted_attempts:
-                print(f"IP: {ip} - Failed attempts: {count}")
-                report.write(f"IP: {ip} - Failed attempts: {count}\n")
-
-            print("\n🚨 Suspicious IPs (Over Threshold):")
-            report.write("\nSuspicious IPs:\n")
-            for ip, count in sorted_attempts:
-                if count >= threshold:
-                    print(f"⚠️ {ip} - {count} failed attempts")
-                    report.write(f"{ip} - {count} failed attempts\n")
-
-    print(f"\n📄 Report saved to: {report_file}")
-
-# Run function
-analyze_ssh_log('sample_ssh.log', 'security_report.txt', threshold=3)
+print("\nReport saved to: security_report.txt")
