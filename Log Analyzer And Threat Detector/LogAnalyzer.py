@@ -28,14 +28,14 @@ def analyze_ssh_log(log_file, report_file, threshold=3):
                 print(f"IP: {ip} - Failed attempts: {count}")
                 report.write(f"IP: {ip} - Failed attempts: {count}\n")
 
-            print("\n🚨 Suspicious IPs (Over Threshold):")
+            print("\n Suspicious IPs (Over Threshold):")
             report.write("\nSuspicious IPs:\n")
             for ip, count in sorted_attempts:
                 if count >= threshold:
                     print(f" {ip} - {count} failed attempts")
                     report.write(f"{ip} - {count} failed attempts\n")
 
-    print(f"\n📄 Report saved to: {report_file}")
+    print(f"\n Report saved to: {report_file}")
 
 # Run function
 analyze_ssh_log('sample_ssh.log', 'security_report.txt', threshold=3)
