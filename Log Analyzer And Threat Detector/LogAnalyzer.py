@@ -44,9 +44,7 @@ def simple_log_analyzer(log_file):
     print(f"\n Total unique IPs: {len(ip_count)}")
     print(f" Total failed attempts: {sum(ip_count.values())}")
 
-# කේතය run කිරීම
 if __name__ == "__main__":
-    # ඔබේ log file name එක මෙහි දමන්න
-    log_file = "auth.log"  # Change this to your log file name
+    log_file = "auth.log" 
     
     simple_log_analyzer(log_file)
