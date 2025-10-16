@@ -4,7 +4,7 @@ A simple **Python tool** that reads system/auth logs and detects **suspicious pa
 
 ---
 
-## 🚀 Features
+## Features
 - Parses system/auth logs for suspicious IPs  
 - Counts failed login attempts  
 - Generates a clean security report  
