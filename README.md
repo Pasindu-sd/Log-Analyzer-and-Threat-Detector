@@ -1,6 +1,6 @@
 # Log-Analyzer-and-Threat-Detector
 
-A simple **Python tool** that reads system/auth logs and detects **suspicious patterns** such as brute-force login attempts, failed SSH logins, and other anomalies.
+A Python-based security tool for analyzing log files and detecting potential threats in real-time. This tool monitors failed login attempts, suspicious activities, and generates security reports.
 
 ---
 
