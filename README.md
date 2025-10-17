@@ -4,7 +4,7 @@ A simple **Python tool** that reads system/auth logs and detects **suspicious pa
 
 ---
 
-## Features
+### Features
 
 - Parses system/auth logs for suspicious IPs
 - Counts failed login attempts
@@ -13,9 +13,14 @@ A simple **Python tool** that reads system/auth logs and detects **suspicious pa
 
 ---
 
-## Add a Sample Code here
+### Prerequisites
 
-Sample Output
+- Python 3.6 or higher
+- Required packages: `re`, `collections`
+
+---
+
+### Sample Output
 
 ```
 Log Analyzer Starting...
