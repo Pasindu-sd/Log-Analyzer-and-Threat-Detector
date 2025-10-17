@@ -5,17 +5,25 @@ A simple **Python tool** that reads system/auth logs and detects **suspicious pa
 ---
 
 ## Features
-- Parses system/auth logs for suspicious IPs  
-- Counts failed login attempts  
-- Generates a clean security report  
-- Highlights IPs over a defined threshold  
+
+- Parses system/auth logs for suspicious IPs
+- Counts failed login attempts
+- Generates a clean security report
+- Highlights IPs over a defined threshold
 
 ---
 
 ## Add a Sample Code here
+
 Sample Output
+
 ```
- code is giving some errors, handling now
+Log Analyzer Starting...
+
+=== SECURITY REPORT ===
+
+Total unique IPs: 2
+Total failed attempts: 3
 ```
 
 ---
