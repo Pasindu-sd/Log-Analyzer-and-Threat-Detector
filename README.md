@@ -27,9 +27,3 @@ Total failed attempts: 3
 ```
 
 ---
-
-```
-     ⚠️ UNDER DEVELOPMENT ⚠️
-```
-
----
