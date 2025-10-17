@@ -21,7 +21,6 @@ def simple_log_analyzer(log_file):
         print(f"Error: '{log_file}' file not found!")
         return
     
-    # Results display කිරීම
     print("\nSECURITY REPORT")
     print("==================")
     
