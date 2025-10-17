@@ -1,0 +1,6 @@
+Log Analyzer Starting...
+
+=== SECURITY REPORT ===
+
+Total unique IPs: 2
+Total failed attempts: 3
