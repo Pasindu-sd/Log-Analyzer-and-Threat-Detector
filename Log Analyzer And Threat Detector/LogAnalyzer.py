@@ -1,5 +1,16 @@
 import re
 
+Edit
+def log_analyzer(log_file, report_file):
+    print("log analyzer Starting...")
+    
+    failed_logins = defaultdict(int)
+    successful_logins = []
+    error_messages = []
+    
+    
+    
+=======
 def simple_log_analyzer(log_file):
     print("Log Analyzer Starting...")
     
@@ -65,3 +76,4 @@ if __name__ == "__main__":
     log_file = "auth.log" 
     
     simple_log_analyzer(log_file)
+main
