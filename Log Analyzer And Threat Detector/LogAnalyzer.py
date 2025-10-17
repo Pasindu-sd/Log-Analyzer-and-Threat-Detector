@@ -1,6 +1,5 @@
 import re
 
-Edit
 def log_analyzer(log_file, report_file):
     print("log analyzer Starting...")
     
@@ -8,9 +7,6 @@ def log_analyzer(log_file, report_file):
     successful_logins = []
     error_messages = []
     
-    
-    
-=======
 def simple_log_analyzer(log_file):
     print("Log Analyzer Starting...")
     
@@ -73,7 +69,6 @@ Jan 1 10:00:09 server sshd[1243]: Failed password for admin from 192.168.1.100 p
     print("Please run the analyzer again...")
 
 if __name__ == "__main__":
+    create_sample_log()
     log_file = "auth.log" 
-    
     simple_log_analyzer(log_file)
-main
