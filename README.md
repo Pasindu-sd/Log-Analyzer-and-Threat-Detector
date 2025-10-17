@@ -17,18 +17,3 @@ A simple **Python tool** that reads system/auth logs and detects **suspicious pa
 
 - Python 3.6 or higher
 - Required packages: `re`, `collections`
-
----
-
-### Sample Output
-
-```
-Log Analyzer Starting...
-
-=== SECURITY REPORT ===
-
-Total unique IPs: 2
-Total failed attempts: 3
-```
-
----
